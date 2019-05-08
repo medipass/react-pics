@@ -24,11 +24,9 @@ function reducer(state, action) {
 
 export default function Picture(props) {
   const { children, placeholder, use } = props;
+
   const [{ state }, dispatch] = React.useReducer(reducer, { state: STATES.IDLE });
   const [isInViewport, setIsInViewport] = React.useState();
-  const wrapperRef = React.useRef();
-
-  const WrapperComponent = use || 'picture';
 
   let defaultImage = children;
   let sourceImages;
@@ -71,6 +69,7 @@ export default function Picture(props) {
     [isInViewport]
   );
 
+  const wrapperRef = React.useRef();
   React.useEffect(() => {
     function checkInViewport() {
       if (!wrapperRef.current) return;
@@ -89,6 +88,8 @@ export default function Picture(props) {
       document.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const WrapperComponent = use || 'picture';
 
   return (
     <WrapperComponent ref={wrapperRef} {...props}>
