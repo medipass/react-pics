@@ -12,9 +12,10 @@
   ],
   "scripts": {
     "build": "nwb build-react-component",
+    "build:demo": "nwb build-demo",
+    "start:demo": "nwb serve-react-demo",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
-    "develop": "nwb serve-react-demo",
     "lint": "eslint ./src"
   },
   "dependencies": {},
