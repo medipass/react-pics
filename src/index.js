@@ -50,11 +50,11 @@ export default function Picture(props) {
           return mediaQuery.matches;
         });
         if (matchedImage) {
-          loadingImage = matchedImage;
+          loadingImage = matchedImage.props;
         }
       }
 
-      image.src = loadingImage.src;
+      image.src = loadingImage.src || loadingImage.srcSet;
       if (loadingImage.srcSet) {
         image.srcSet = loadingImage.srcSet;
         image.sizes = loadingImage.sizes;
