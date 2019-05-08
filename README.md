@@ -2,6 +2,8 @@
 
 > Tiny (2.3kB) React component for image lazy loading
 
+[Demo](https://medipass.github.io/react-pics/)
+
 <p align="center"><img src="./react-pics.png" width="600px"></img></p>
 
 
