@@ -88,7 +88,7 @@ export default function Picture(props) {
     return function cleanup() {
       document.removeEventListener('scroll', handleScroll);
     };
-  });
+  }, []);
 
   return (
     <WrapperComponent ref={wrapperRef} {...props}>
