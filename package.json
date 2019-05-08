@@ -14,19 +14,24 @@
     "build": "nwb build-react-component",
     "clean": "nwb clean-module && nwb clean-demo",
     "prepublishOnly": "npm run build",
-    "start": "nwb serve-react-demo",
-    "test": "nwb test-react",
-    "test:coverage": "nwb test-react --coverage",
-    "test:watch": "nwb test-react --server"
+    "develop": "nwb serve-react-demo",
+    "lint": "eslint ./src"
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "16.x"
+    "react": "16.8.6"
   },
   "devDependencies": {
-    "nwb": "0.23.x",
+    "@medipass/eslint-config-react-medipass": "8.4.0",
+    "babel-eslint": "10.0.1",
+    "eslint": "5.16.0",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-prettier": "3.0.1",
+    "fannypack": "4.19.11",
+    "nwb": "0.23.0",
     "react": "16.8.6",
-    "react-dom": "16.8.6"
+    "react-dom": "16.8.6",
+    "styled-components": "4.2.0"
   },
   "author": "",
   "homepage": "",
